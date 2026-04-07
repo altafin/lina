@@ -1,8 +1,9 @@
 <?php
 
 use Livewire\Component;
+use Livewire\Attributes\Title;
 
-new class extends Component
+new #[Title('Post')] class extends Component
 {
     public string $title = '';
 
