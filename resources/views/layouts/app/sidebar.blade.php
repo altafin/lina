@@ -18,6 +18,9 @@
                     <flux:sidebar.item icon="document" :href="route('posts')" :current="request()->routeIs('posts')" wire:navigate>
                         {{ __('Posts') }}
                     </flux:sidebar.item>
+                    <flux:sidebar.item icon="document" :href="route('people')" :current="request()->routeIs('people')" wire:navigate>
+                        {{ __('People') }}
+                    </flux:sidebar.item>
                 </flux:sidebar.group>
             </flux:sidebar.nav>
 
