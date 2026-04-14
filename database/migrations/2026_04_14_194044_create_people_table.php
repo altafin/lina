@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('people', function (Blueprint $table) {
             $table->id();
             $table->string('name', 255);
+            $table->foreignId('type_id')->constrained('people_types')->cascadeOnDelete();
             $table->timestamps();
             $table->softDeletes();
         });
