@@ -14,17 +14,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-
         $this->call([
+            UserSeeder::class,
             TypeSeeder::class,
         ]);
+        $this->command->info('User seeded!');
         $this->command->info('Person type seeded!');
-
-        // User::factory(10)->create();
-
-//        User::factory()->create([
-//            'name' => 'Test User',
-//            'email' => 'test@example.com',
-//        ]);
     }
 }
