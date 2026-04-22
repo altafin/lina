@@ -25,9 +25,10 @@ class PersonForm extends Form
     public function store()
     {
         $this->validate();
-        Person::create(
-            $this->only(['name', 'type'])
-        );
+        Person::create([
+            'name' => $this->name,
+            'type_id' => $this->type
+        ]);
         $this->reset();
     }
 
