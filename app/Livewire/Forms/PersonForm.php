@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Forms;
 
+use App\Models\Person;
 use Livewire\Form;
 
 class PersonForm extends Form
@@ -19,6 +20,15 @@ class PersonForm extends Form
                 'max:255',
             ],
         ];
+    }
+
+    public function store()
+    {
+        $this->validate();
+        Person::create(
+            $this->only(['name', 'type'])
+        );
+        $this->reset();
     }
 
 }
