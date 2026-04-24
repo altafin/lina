@@ -8,7 +8,7 @@ use Livewire\Form;
 class PersonForm extends Form
 {
     public string $name = '';
-    public string $type = '';
+    public string $type_id = '';
 
     protected function rules()
     {
@@ -25,10 +25,11 @@ class PersonForm extends Form
     public function store()
     {
         $this->validate();
-        Person::create([
-            'name' => $this->name,
-            'type_id' => $this->type
-        ]);
+        Person::create($this->only(['name', 'type_id']));
+//        Person::create([
+//            'name' => $this->name,
+//            'type_id' => $this->type
+//        ]);
         $this->reset();
     }
 

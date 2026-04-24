@@ -42,7 +42,7 @@ new class extends Component
                 <flux:select
                     label="Type"
                     placeholder="Choose type..."
-                    wire:model="form.type"
+                    wire:model="form.type_id"
                     class="dark:bg-zinc-900"
                 >
                     <flux:select.option value="1">Física</flux:select.option>
