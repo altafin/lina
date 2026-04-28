@@ -3,6 +3,7 @@
 namespace App\Livewire\Forms;
 
 use App\Models\Person;
+use App\Models\Person\Type;
 use Livewire\Form;
 
 class PersonForm extends Form
@@ -25,7 +26,11 @@ class PersonForm extends Form
     public function store()
     {
         $this->validate();
-        Person::create($this->only(['name', 'type_id']));
+        $type = Type::find($this->type_id);
+        $type->people()->create($this->only(['name']));
+
+//        Person::create($this->only(['name', 'type_id']));
+
 //        Person::create([
 //            'name' => $this->name,
 //            'type_id' => $this->type

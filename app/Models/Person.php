@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 #[Table('people')]
-#[Fillable(['name', 'type_id'])]
+#[Fillable(['name'])]
 class Person extends Model
 {
     use SoftDeletes;
