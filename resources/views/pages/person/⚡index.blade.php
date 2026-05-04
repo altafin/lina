@@ -13,7 +13,7 @@ new #[Title('People')] class extends Component
     #[Computed]
     public function people()
     {
-        return Person::latest()->paginate(5);
+        return Person::with('type')->latest()->paginate(5);
     }
 };
 ?>
@@ -49,7 +49,7 @@ new #[Title('People')] class extends Component
                     </td>
 
                     <td class="px-6 py-4 text-zinc-600 dark:text-zinc-200 truncate max-w-md">
-                        {{ $person->type_id }}
+                        {{ $person->type->name }}
                     </td>
 
                     <td class="px-6 py-4">
