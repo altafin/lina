@@ -8,6 +8,7 @@ use Livewire\Form;
 
 class PersonForm extends Form
 {
+    public ?Person $person = null;
     public string $name = '';
     public string $type_id = '';
 
@@ -23,6 +24,13 @@ class PersonForm extends Form
         ];
     }
 
+    public function setPerson(Person $person)
+    {
+        $this->person = $person;
+        $this->name = $person->name;
+        $this->type_id = $person->type_id;
+    }
+
     public function store()
     {
         $this->validate();
@@ -36,6 +44,15 @@ class PersonForm extends Form
 //            'type_id' => $this->type
 //        ]);
         $this->reset();
+    }
+
+    public function update()
+    {
+        $this->validate();
+        $this->person->update($this->only(['name']));
+
+//        $type = Type::find($this->type_id);
+//        $type->people()->update($this->only(['name']));
     }
 
 }

@@ -28,6 +28,7 @@ new #[Title('People')] class extends Component
     </flux:modal.trigger>
 
     <livewire:person.create/>
+    <livewire:person.edit/>
 
     {{-- Table --}}
     <div class="overflow-x-auto">
