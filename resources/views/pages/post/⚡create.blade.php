@@ -58,7 +58,7 @@ new class extends Component
 
 
 
-//CÓDIGO ANTIGO DA CLASSE 07/04/2-26
+//CÃ“DIGO ANTIGO DA CLASSE 07/04/2-26
 /*
 use Livewire\Component;
 use Livewire\Attributes\Title;

@@ -16,12 +16,12 @@ class TypeSeeder extends Seeder
         $arrTypes = array(
             array(
                 'id' => 1,
-                'name' => 'Física',
+                'name' => 'FÃ­sica',
                 'system' => true,
             ),
             array(
                 'id' => 2,
-                'name' => 'Jurídica',
+                'name' => 'JurÃ­dica',
                 'system' => true,
             ),
         );

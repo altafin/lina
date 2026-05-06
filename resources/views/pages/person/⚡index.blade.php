@@ -80,5 +80,9 @@ new #[Title('People')] class extends Component
             </tbody>
         </table>
     </div>
+    {{-- Pagination Link --}}
+    <div>
+        {{ $this->people->links() }}
+    </div>
 
 </div>
